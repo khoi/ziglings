@@ -172,7 +172,7 @@ pub fn build(b: *Build) !void {
         "patches" ++ sep ++ "healed";
     const work_path = if (healed) healed_path else "exercises";
 
-    const header_step = PrintStep.create(b, logo);
+    const header_step = PrintStep.create(b, "");
 
     if (exno) |n| {
         // Named build mode: verifies a single exercise.
