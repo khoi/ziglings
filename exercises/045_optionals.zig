@@ -26,10 +26,7 @@ const std = @import("std");
 
 pub fn main() void {
     const result = deepThought();
-
-    // Please threaten the result so that answer is either the
-    // integer value from deepThought() OR the number 42:
-    const answer: u8 = result;
+    const answer: u8 = result orelse 42;
 
     std.debug.print("The Ultimate Answer: {}.\n", .{answer});
 }
